@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+</script>
+<body ng-app="patronicity">
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img class="logo" alt="Patronicity" src="//media.patronicity.com/9d66266e868fe6a6f3178ebb17639b9c924b5571/img/logo-white.svg"/>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="first">
+                            <a href="https://www.patronicity.com/projects/start">Start </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="">
+                            <a href="https://www.patronicity.com/projects/discover_projects">Discover </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="">
+                            <a href="https://www.patronicity.com/about-us">About Us </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown crowdgranting last has_children">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <em>New! </em>
+                                Crowdgranting <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="first">
+                                    <a href="https://www.patronicity.com/crowdgranting">An Overview</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.patronicity.com/puremichigan">Public Spaces, Community Places - MEDC</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.patronicity.com/commonwealthplaces">Commonwealth Places - MassDev</a>
+                                </li>
+                                <li class="">
+                                    <a href="/creatingplaces">CreatINg Places - IHCDA</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.patronicity.com/stellar#/">CreatINg Stellar Places</a>
+                                </li>
+                                <li class="last">
+                                    <a href="https://www.patronicity.com/bostonmainstreets#/">Boston Main Streets Foundation</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <search-and-user-navigation></search-and-user-navigation>
+                </div>
+            </div>
+        </nav>
+<!--    START HERE-->
+        <div class="container clearfix">
+            <div class="container" ng-controller="profileProjectsPageController" ng-init="cparam1=18396">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div id="profile-page-title">
+                            <br>
+                            <p id="branded" class="text-center lead" style="text-transform: uppercase;">Profile</p>
+                            <img src="https://s3.amazonaws.com/patronicity/users%2F18396%2FPT_Icons-19-120x120.png" alt="Marcell Hayes" width="180px" style="margin: 0 auto;" class="img-responsive img-circle"/>
+                            <p class="text-center">
+                                <span class="h1 serif">Marcell Hayes</span>
+                                <br/>
+                                <span class="glyphicon glyphicon-map-marker" id="branded"></span>
+                            </p>
+                            <div class="btn-group btn-group-justified">
+                                <a href="" target="_blank" type="button" class="btn btn-default">Website</a>
+                                <a href="" target="_blank" type="button" class="btn btn-default ">Facebook</a>
+                            </div>
+                            <br>
+                            <div class="text-center well">
+                                <p class="lead">
+                                    <strong>New!</strong>
+                                    <br>Download a list of your contributions.
+                                </p>
+                                <a class="btn btn-primary" href="/projects/project/simple_donation_report/">Download tax deductible donations</a>
+                                <br>
+                                <br>
+                                <a class="btn btn-primary" href="/projects/project/donation_report/">Download All Donations</a>
+                                <br>
+                            </div>
+                            <hr/>
+                            <p></p>
+                        </div>
+                        <a class="btn btn-lg btn-small" href="https://www.patronicity.com/users/edit">Edit Profile</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <nav class="navbar navbar-default navbar-main">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#projects-filter" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand visible-xs" href="#">Filter</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="projects-filter">
+                                <ul class="nav navbar-nav">
+                                    <li class="projecttype" ng-click="selectType('created',18396)" ng-class="{active: type == 'created'}">
+                                        <a href="#">Started</a>
+                                    </li>
+                                    <li class="projecttype" ng-click="selectType('supported',18396)" ng-class="{active: type == 'supported'}">
+                                        <a href="#">Funded</a>
+                                    </li>
+                                    <li class="projecttype" ng-click="selectType('liked',18396)" ng-class="{active: type == 'liked'}">
+                                        <a href="#">Liked</a>
+                                    </li>
+                                    <li class="projecttype" ng-click="selectType('assigned',18396)" ng-class="{active: type == 'assigned'}">
+                                        <a href="#">Team Member</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="col-md-12">
+                        <project-card-grid default-type="created" max-per-load="6" category="category" type="type" show-load-more="true" param1="cparam1"></project-card-grid>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--    END HERE-->
+        <section class="subscribe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>Amazing local projects, to your inbox</h3>
+                        <br>
+                    </div>
+                    <div class="col-md-4 col-md-offset-4">
+                        <form action="https://app.mailerlite.com/webforms/submit/z0u9z1" method="post" name="ml-form" class="validate ng-pristine ng-valid" target="_blank" novalidate="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="email address" name="fields[email]" id="ml-email">
+                                <input type="hidden" name="ml-submit" value="1">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Count Me In!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <ul class="list-inline list-footer">
+                            <li class="first">
+                                <a href="https://www.patronicity.com/projects/discover_projects/latest">Discover</a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.patronicity.com/projects/start">Start</a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.patronicity.com/about-us">About Us</a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.patronicity.com/ideas">Ideas</a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.patronicity.com/crowdgranting">Crowdgranting</a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.patronicity.com/how-it-works">How it Works</a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.patronicity.com/press">Press</a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.patronicity.com/contact">Contact Us</a>
+                            </li>
+                            <li class="last">
+                                <a href="https://www.patronicity.com/faq">FAQ</a>
+                            </li>
+                        </ul>
+                        <ul class="list-inline list-footer-secondary">
+                            <li>© 2017 Patronicity</li>
+                            <li>
+                                <a href="/terms-of-use">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="/terms-of-use">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="//media.patronicity.com/9d66266e868fe6a6f3178ebb17639b9c924b5571/img/logo-white.svg" alt="Patronicity Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+</html>
