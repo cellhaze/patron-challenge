@@ -10,72 +10,227 @@
 <body>    
     <div class="row">
         <div class="col-xs-2 left-sidebar">
-            <div class="profile-nav">
-                <img src="images/DSC_1032.jpg" class="img-circle" width="140" height="140">
-                
-                <span id="location">Location</span>
+            <div class="profile-nav align-middle">
+                <div class="profile-image-container">
+                    <img src="images/ebrahim-profile.jpg" class="img-circle" width="140" height="140">
+                    <div class="overlay">
+                        <div class="text">Edit<br>Image</div>
+                    </div>
+                </div>    
+                <span id="location"><a href="#">Edit</a></span>
                 <button type="button" class="btn btn-success">Facebook</button>
                 <button type="button" class="btn btn-success">Email</button>
                 <button type="button" class="btn btn-success">Info</button>
             </div>    
         </div>
         <div class="col-xs-10 main-content">
-            <h1>About Me:</h1>
-            <h2 id="summary">I’m a self-motivated hard worker with good attention to detail. My skills with digital illustration and graphic design crossover with experience in printing and Information Technology to give me a well versed view of the field of technology.</h2>
-            <button type="button" data-toggle="collapse" data-target="#project-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-menu-down"></span>Projects</button>
-                <div id="project-content" class="collapse">
-                    <ul class="list-inline">
-                        <li><a href="#">Supported</a></li>
-                        <li><a href="#">Assigned</a></li>
-                        <li><a href="#">Liked</a></li>
-                        <li><a href="#">Like By Friends</a></li>
-                    </ul>
-                    <p>Duis doctrina qui instituendarum. Non quid dolore qui           cernantur, occaecat cillum 
-                        nam consequat domesticarum et est quo firmissimum e ne te arbitrantur. Ita enim 
-                        do velit est nulla arbitror voluptate. Qui malis appellat, sed tamen fabulas 
-                        appellat, qui nulla deserunt probant, appellat te nescius, nulla consequat non 
-                        sint aliqua a doctrina exquisitaque in ingeniis ea proident quem multos ingeniis 
-                        velit ab cupidatat ea dolore. Varias incididunt se multos legam, aute possumus 
-                        se offendit qui quorum est offendit ad lorem est offendit a enim ad aute admodum 
-                        nam illustriora iis esse o in esse singulis, nam voluptate adipisicing ad 
-                        quibusdam a possumus. Expetendis summis nam laborum eruditionem, pariatur eu 
-                        senserit. Ipsum laboris nam irure quae.</p>
+            <div class="padding-left">
+                <div class="name-area">
+                    <h1 id="profile-name">Ebrahim Varachia
+                    <small>
+                        <span class="glyphicon glyphicon-map-marker"></span>Detroit</small>
+                    </h1>
                 </div>
-            <button type="button" data-toggle="collapse" data-target="#donations-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-menu-down"></span>Donations</button>
-                <div id="donations-content" class="collapse">
-                    <p>Duis doctrina qui instituendarum. Non quid dolore qui           cernantur, occaecat cillum 
-                        nam consequat domesticarum et est quo firmissimum e ne te arbitrantur. Ita enim 
-                        do velit est nulla arbitror voluptate. Qui malis appellat, sed tamen fabulas 
-                        appellat, qui nulla deserunt probant, appellat te nescius, nulla consequat non 
-                        sint aliqua a doctrina exquisitaque in ingeniis ea proident quem multos ingeniis 
-                        velit ab cupidatat ea dolore. Varias incididunt se multos legam, aute possumus 
-                        se offendit qui quorum est offendit ad lorem est offendit a enim ad aute admodum 
-                        nam illustriora iis esse o in esse singulis, nam voluptate adipisicing ad 
-                        quibusdam a possumus. Expetendis summis nam laborum eruditionem, pariatur eu 
-                        senserit. Ipsum laboris nam irure quae.</p>
-                </div>
-            <button type="button" data-toggle="collapse" data-target="#test-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-menu-down"></span>Test</button>
-                <div id="test-content" class="collapse">
-                    <p>Duis doctrina qui instituendarum. Non quid dolore qui           cernantur, occaecat cillum 
-                        nam consequat domesticarum et est quo firmissimum e ne te arbitrantur. Ita enim 
-                        do velit est nulla arbitror voluptate. Qui malis appellat, sed tamen fabulas 
-                        appellat, qui nulla deserunt probant, appellat te nescius, nulla consequat non 
-                        sint aliqua a doctrina exquisitaque in ingeniis ea proident quem multos ingeniis 
-                        velit ab cupidatat ea dolore. Varias incididunt se multos legam, aute possumus 
-                        se offendit qui quorum est offendit ad lorem est offendit a enim ad aute admodum 
-                        nam illustriora iis esse o in esse singulis, nam voluptate adipisicing ad 
-                        quibusdam a possumus. Expetendis summis nam laborum eruditionem, pariatur eu 
-                        senserit. Ipsum laboris nam irure quae.</p>
-                </div>
-    <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
-  </div>    
+                <h2 id="about-me">About Me:</h2>
+                <div class="summary-container">
+                    <h3 id="summary">I’m a self-motivated hard worker with good attention to detail. My skills with digital illustration and graphic design crossover with experience in printing and Information Technology to give me a well versed view of the field of technology.</h3>
+                    <a href="#" class="more-info">More Info</a>
+                </div>  
+                
+                <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h2 class="modal-title">User Info</h2>
+                        </div>
+                        <div class="modal-body">
+                          <div class="info-row">
+                            <div class="info-left">
+                              <h3>Company</h3><h4>Company Name</h4>
+                            </div>
+                            <div class="info-right">
+                              <h3>Phone</h3><h4>(555) 555-5555</h4>
+                            </div>
+                          </div>
+                          <div class="info-row">
+                            <div class="info-left">
+                              <h3>Location</h3><h4>City Name</h4>
+                            </div>
+                            <div class="info-right">
+                              <h3>Facebook</h3><h4>Facebook URL</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>  
+                    </div>
+                    </div>
+                <!-- Modal End -->
+                
+                <button type="button" data-toggle="collapse" data-target="#project-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-triangle-bottom"></span> Projects</button>
+                    <div id="project-content" class="collapse">
+                        <ul class="list-inline">
+                            <li><a href="#">Supported</a></li>
+                            <li><a href="#">Assigned</a></li>
+                            <li><a href="#">Liked</a></li>
+                            <li><a href="#">Like By Friends</a></li>
+                        </ul>
+                        <p>Duis doctrina qui instituendarum. Non quid dolore qui cernantur, occaecat cillum nam consequat domesticarum et est quo firmissimum e ne te arbitrantur. Ita enim do velit est nulla arbitror voluptate.</p>
+                        <div class="container">
+
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                            <div class="carousel-page">
+                              <div class="row">
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>   
+                                </div>
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>  
+                              </div>  
+                            </div>  
+                          </div>
+                          <div class="item">
+                            <div class="carousel-page">
+                              <div class="row">
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>   
+                                </div>
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>  
+                              </div>  
+                            </div>  
+                          </div>    
+                          <div class="item">
+                            <div class="row">
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                </div>
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                </div>  
+                              </div>
+                          </div>
+                        </div>
+        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                <button type="button" data-toggle="collapse" data-target="#donations-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-triangle-bottom"></span> Donations</button>
+                    <div id="donations-content" class="collapse">
+                        <p>Duis doctrina qui instituendarum. Non quid dolore qui           cernantur, occaecat cillum 
+                            nam consequat domesticarum et est quo firmissimum e ne te arbitrantur. Ita enim 
+                            do velit est nulla arbitror voluptate. Qui malis appellat, sed tamen fabulas 
+                            appellat, qui nulla deserunt probant, appellat te nescius, nulla consequat non 
+                            sint aliqua a doctrina exquisitaque in ingeniis ea proident quem multos ingeniis 
+                            velit ab cupidatat ea dolore. Varias incididunt se multos legam, aute possumus 
+                            se offendit qui quorum est offendit ad lorem est offendit a enim ad aute admodum 
+                            nam illustriora iis esse o in esse singulis, nam voluptate adipisicing ad 
+                            quibusdam a possumus. Expetendis summis nam laborum eruditionem, pariatur eu 
+                            senserit. Ipsum laboris nam irure quae.</p>
+                    </div>
+            </div>
         </div>
     </div>
 </body> 
