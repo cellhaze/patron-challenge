@@ -14,10 +14,10 @@
                 <div class="profile-image-container">
                     <img src="images/ebrahim-profile.jpg" class="img-circle" width="140" height="140">
                     <div class="overlay">
-                        <div class="text">Edit<br>Image</div>
+                        <div class="text"><a href="#">Edit<br>Image</a></div>
                     </div>
                 </div>    
-                <span id="location"><a href="#">Edit</a></span>
+                <span id="edit-button"><a href="#">Edit</a></span>
                 <button type="button" class="btn btn-success">Facebook</button>
                 <button type="button" class="btn btn-success">Email</button>
                 <button type="button" class="btn btn-success">Info</button>
@@ -34,7 +34,7 @@
                 <h2 id="about-me">About Me:</h2>
                 <div class="summary-container">
                     <h3 id="summary">I’m a self-motivated hard worker with good attention to detail. My skills with digital illustration and graphic design crossover with experience in printing and Information Technology to give me a well versed view of the field of technology.</h3>
-                    <a href="#" class="more-info">More Info</a>
+                    <a href="#" class="more-info" data-toggle="modal" data-target="#myModal">More Info</a>
                 </div>  
                 
                 <!-- Modal -->
@@ -63,6 +63,14 @@
                               <h3>Facebook</h3><h4>Facebook URL</h4>
                             </div>
                           </div>
+                          <div class="info-row">
+                            <div class="info-left">
+                              <h3>Address</h3><h4>Address</h4>
+                            </div>
+                            <div class="info-right">
+                              <h3>Email</h3><h4>email@email.com</h4>
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -85,7 +93,7 @@
 
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-                        <!-- Wrapper for slides -->
+                <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                           <div class="item active">
                             <div class="carousel-page">
@@ -219,16 +227,38 @@
                     </div>
                 <button type="button" data-toggle="collapse" data-target="#donations-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-triangle-bottom"></span> Donations</button>
                     <div id="donations-content" class="collapse">
+                        
                         <p>Duis doctrina qui instituendarum. Non quid dolore qui           cernantur, occaecat cillum 
-                            nam consequat domesticarum et est quo firmissimum e ne te arbitrantur. Ita enim 
-                            do velit est nulla arbitror voluptate. Qui malis appellat, sed tamen fabulas 
-                            appellat, qui nulla deserunt probant, appellat te nescius, nulla consequat non 
-                            sint aliqua a doctrina exquisitaque in ingeniis ea proident quem multos ingeniis 
-                            velit ab cupidatat ea dolore. Varias incididunt se multos legam, aute possumus 
-                            se offendit qui quorum est offendit ad lorem est offendit a enim ad aute admodum 
-                            nam illustriora iis esse o in esse singulis, nam voluptate adipisicing ad 
-                            quibusdam a possumus. Expetendis summis nam laborum eruditionem, pariatur eu 
-                            senserit. Ipsum laboris nam irure quae.</p>
+                            nam consequat domesticarum et est quo firmissimum e ne te arbitrantur.</p>
+        <!-- Table -->                
+                        <div class="container">
+                          <h2>Donations</h2>
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Campaign</th>
+                                <th>Donation</th>
+                                <th>Status</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Plainwell Dog Park</td>
+                                <td>$7.85 USD</td>
+                                <td>
+                                  <b>Created:</b> 7/10/17 11:46AM<br>
+                                  <b>Charged:</b> 7/10/17 11:46AM AM to American Express ending in 1007.<br>
+                                  <b>Display as:</b> Ebrahim Varachia $7 USD<br>
+                                  <button type="button" class="btn btn-success">Edit Display</button>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn btn-success">Resend Receipt</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                     </div>
             </div>
         </div>

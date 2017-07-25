@@ -1,3 +1,4 @@
+/*------Left Column------*/
 .left-sidebar {
     height: 900px;
     background-color: #22974a;
@@ -42,9 +43,14 @@
     font-weight: 900;
 }
 
-#location {
-    display: block;
+#edit-button {
+    font-size: 25px;
     font-weight: 700;
+    color: #d58512;
+}
+
+a {
+    color: #22974a !important;
 }
 
 .profile-image-container {
@@ -89,6 +95,12 @@
     font-weight: bolder;
 }
 
+/*------Right Column------*/
+
+.name-area {
+    border-bottom: 1px solid black;
+}
+
 #about-me {
     font-size: 50px;
 }
@@ -108,7 +120,7 @@
     display: block;
     font-weight: 100;
     padding: 40px;
-    margin: -10px 0 30px 0;
+    margin: -10px 0 10px 0;
     background-color: beige;
 }
 
@@ -117,16 +129,26 @@
 }
 
 .summary-container {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 #project-content {
-    margin: 20px 0 0 30px;
+    margin: 0 0 0 30px;
 }
 
 #project-content p {
     max-width: 600px;
 }
+
+.more-info {
+    font-size: 30px;
+    display: block;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/*------Carousel------*/
 
 .card-images {
     width:  100%;
@@ -145,4 +167,24 @@
 
 .carousel-card h2 {
     font-weight: 600;
+}
+
+/*------Modal------*/
+
+.modal {
+  text-align: center;
+}
+
+.info-row {
+  display: block;
+  height: 100px;
+  border-bottom: 1px solid black;
+}
+
+.info-left {
+  float: left;
+}
+
+.info-right {
+  float: right;
 }
