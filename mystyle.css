@@ -25,6 +25,7 @@
 .profile-nav {
     z-index: 20;
     margin: 0 auto;
+    padding-bottom: 30px;
     text-align: center;
     position: relative;
 }
@@ -164,6 +165,11 @@ a {
     font-size: 12px;
 }
 
+#table-column-shrink {
+    width: 400px;
+}
+
+
 /*------Carousel------*/
 
 .carousel-container {
@@ -213,11 +219,27 @@ a {
   text-align: center;
 }
 
+.modal-header {
+    background-color: #449d44;
+    color: white;
+}
+
 .info-row {
   display: block;
   height: 100px;
   border-bottom: 1px solid #bbbbbb;
+  padding: 0 60px;
+}
+
+.private-row {
+    height: 100px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #b4b1b1;
     padding: 0 60px;
+}
+
+.private-row button {
+    font-size: 12px;
 }
 
 .info-left {
@@ -228,6 +250,7 @@ a {
   float: right;
 }
 
-#table-column-shrink {
-    width: 400px;
+.modal-content {
+    max-height: 600px;
+    overflow: auto;
 }
