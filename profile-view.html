@@ -7,17 +7,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
-<body>    
+<body>
+<div class="main-right-container">   
+<div id="custom-profile left-container">
     <div class="row">
         <div class="col-xs-2 left-sidebar">
             <div class="profile-nav align-middle">
                 <div class="profile-image-container">
                     <img src="images/ebrahim-profile.jpg" class="img-circle" width="140" height="140">
                     <div class="overlay">
-                        <div class="text"><a href="#">Edit<br>Image</a></div>
+                        <div class="text"><a href="#" data-toggle="modal" data-target="#myModal">Edit<br>Image</a></div>
                     </div>
                 </div>    
-                <span id="edit-button"><a href="#">Edit</a></span>
+                <span id="edit-button"><a href="#" data-toggle="modal" data-target="#myModal">Edit</a></span>
                 <button type="button" class="btn btn-success">Facebook</button>
                 <button type="button" class="btn btn-success">Email</button>
                 <button type="button" class="btn btn-success">Info</button>
@@ -73,6 +75,7 @@
                           </div>
                         </div>
                         <div class="modal-footer">
+                          <button type="button" class="btn btn-warning" data-dismiss="modal">Edit</button>
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                       </div>  
@@ -89,17 +92,18 @@
                             <li><a href="#">Like By Friends</a></li>
                         </ul>
                         <p>Duis doctrina qui instituendarum. Non quid dolore qui cernantur, occaecat cillum nam consequat domesticarum et est quo firmissimum e ne te arbitrantur. Ita enim do velit est nulla arbitror voluptate.</p>
-                        <div class="container">
-
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        
+               <!-- Carousel -->         
+                        <div class="carousel-container">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
 
                 <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                           <div class="item active">
                             <div class="carousel-page">
                               <div class="row">
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
                                   <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
@@ -111,23 +115,25 @@
                                     <a href="#" class="btn btn-success">SUPPORT</a>
                                   </div>
                                 </div>
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
                                   </p>
                                   <div class="btn-group btn-group-justified">
                                     <a href="#" class="btn btn-success">VIEW</a>
                                     <a href="#" class="btn btn-success">SUPPORT</a>
-                                  </div>   
+                                  </div>
                                 </div>
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
                                   </p>
                                   <div class="btn-group btn-group-justified">
@@ -141,11 +147,12 @@
                           <div class="item">
                             <div class="carousel-page">
                               <div class="row">
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
                                   </p>
                                   <div class="btn-group btn-group-justified">
@@ -153,23 +160,25 @@
                                     <a href="#" class="btn btn-success">SUPPORT</a>
                                   </div>
                                 </div>
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
                                   </p>
                                   <div class="btn-group btn-group-justified">
                                     <a href="#" class="btn btn-success">VIEW</a>
                                     <a href="#" class="btn btn-success">SUPPORT</a>
-                                  </div>   
+                                  </div>
                                 </div>
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
                                   </p>
                                   <div class="btn-group btn-group-justified">
@@ -179,39 +188,7 @@
                                 </div>  
                               </div>  
                             </div>  
-                          </div>    
-                          <div class="item">
-                            <div class="row">
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
-                                  Location
-                                  <div class="card-sub-heading"></div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
-                                  </p>
-                                  <div class="btn-group btn-group-justified">
-                                    <a href="#" class="btn btn-success">VIEW</a>
-                                    <a href="#" class="btn btn-success">SUPPORT</a>
-                                  </div>
-                                </div>
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
-                                  Location
-                                  <div class="card-sub-heading"></div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
-                                  </p>
-                                </div>
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
-                                  Location
-                                  <div class="card-sub-heading"></div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
-                                  </p>
-                                </div>  
-                              </div>
-                          </div>
+                          </div>   
                         </div>
         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -228,10 +205,9 @@
                 <button type="button" data-toggle="collapse" data-target="#donations-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-triangle-bottom"></span> Donations</button>
                     <div id="donations-content" class="collapse">
                         
-                        <p>Duis doctrina qui instituendarum. Non quid dolore qui           cernantur, occaecat cillum 
-                            nam consequat domesticarum et est quo firmissimum e ne te arbitrantur.</p>
+                        <p>Duis doctrina qui instituendarum. Non quid dolore qui cernantur, occaecat cillum nam consequat domesticarum et est quo firmissimum e ne te arbitrantur.</p>
         <!-- Table -->                
-                        <div class="container">
+                        <div class="container donations">
                           <h2>Donations</h2>
                           <table class="table">
                             <thead>
@@ -263,5 +239,7 @@
             </div>
         </div>
     </div>
+</div>
+</div> 
 </body> 
 </html>

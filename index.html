@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
-    <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="angular.min.js"></script>
     <script src="angular-route.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="script.js"></script>
 </head>
 <body>
 </script>
@@ -75,77 +74,233 @@
             </div>
         </nav>
 <!--    START HERE-->
-        <div class="container clearfix">
-            <div class="container" ng-controller="profileProjectsPageController" ng-init="cparam1=18396">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-4">
-                        <div id="profile-page-title">
-                            <br>
-                            <p id="branded" class="text-center lead" style="text-transform: uppercase;">Profile</p>
-                            <img src="https://s3.amazonaws.com/patronicity/users%2F18396%2FPT_Icons-19-120x120.png" alt="Marcell Hayes" width="180px" style="margin: 0 auto;" class="img-responsive img-circle"/>
-                            <p class="text-center">
-                                <span class="h1 serif">Marcell Hayes</span>
-                                <br/>
-                                <span class="glyphicon glyphicon-map-marker" id="branded"></span>
-                            </p>
-                            <div class="btn-group btn-group-justified">
-                                <a href="" target="_blank" type="button" class="btn btn-default">Website</a>
-                                <a href="" target="_blank" type="button" class="btn btn-default ">Facebook</a>
-                            </div>
-                            <br>
-                            <div class="text-center well">
-                                <p class="lead">
-                                    <strong>New!</strong>
-                                    <br>Download a list of your contributions.
-                                </p>
-                                <a class="btn btn-primary" href="/projects/project/simple_donation_report/">Download tax deductible donations</a>
-                                <br>
-                                <br>
-                                <a class="btn btn-primary" href="/projects/project/donation_report/">Download All Donations</a>
-                                <br>
-                            </div>
-                            <hr/>
-                            <p></p>
-                        </div>
-                        <a class="btn btn-lg btn-small" href="https://www.patronicity.com/users/edit">Edit Profile</a>
+<div id="custom-profile">
+    <div class="row">
+        <div class="col-xs-2 left-sidebar">
+            <div class="profile-nav align-middle">
+                <div class="profile-image-container">
+                    <img src="images/ebrahim-profile.jpg" class="img-circle" width="140" height="140">
+                    <div class="overlay">
+                        <div class="text"><a href="#">Edit<br>Image</a></div>
                     </div>
+                </div>    
+                <span id="edit-button"><a href="#">Edit</a></span>
+                <button type="button" class="btn btn-success">Facebook</button>
+                <button type="button" class="btn btn-success">Email</button>
+                <button type="button" class="btn btn-success">Info</button>
+            </div>    
+        </div>
+        <div class="col-xs-10 main-content">
+            <div class="padding-left">
+                <div class="name-area">
+                    <h1 id="profile-name">Ebrahim Varachia
+                    <small>
+                        <span class="glyphicon glyphicon-map-marker"></span>Detroit</small>
+                    </h1>
                 </div>
-                <div class="row">
-                    <nav class="navbar navbar-default navbar-main">
+                <h2 id="about-me">About Me:</h2>
+                <div class="summary-container">
+                    <h3 id="summary">I’m a self-motivated hard worker with good attention to detail. My skills with digital illustration and graphic design crossover with experience in printing and Information Technology to give me a well versed view of the field of technology.</h3>
+                    <a href="#" class="more-info" data-toggle="modal" data-target="#myModal">More Info</a>
+                </div>  
+                
+                <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h2 class="modal-title">User Info</h2>
+                        </div>
+                        <div class="modal-body">
+                          <div class="info-row">
+                            <div class="info-left">
+                              <h3>Company</h3><h4>Company Name</h4>
+                            </div>
+                            <div class="info-right">
+                              <h3>Phone</h3><h4>(555) 555-5555</h4>
+                            </div>
+                          </div>
+                          <div class="info-row">
+                            <div class="info-left">
+                              <h3>Location</h3><h4>City Name</h4>
+                            </div>
+                            <div class="info-right">
+                              <h3>Facebook</h3><h4>Facebook URL</h4>
+                            </div>
+                          </div>
+                          <div class="info-row">
+                            <div class="info-left">
+                              <h3>Address</h3><h4>Address</h4>
+                            </div>
+                            <div class="info-right">
+                              <h3>Email</h3><h4>email@email.com</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>  
+                    </div>
+                    </div>
+                <!-- Modal End -->
+                
+                <button type="button" data-toggle="collapse" data-target="#project-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-triangle-bottom"></span> Projects</button>
+                    <div id="project-content" class="collapse">
+                        <ul class="list-inline">
+                            <li><a href="#">Supported</a></li>
+                            <li><a href="#">Assigned</a></li>
+                            <li><a href="#">Liked</a></li>
+                            <li><a href="#">Like By Friends</a></li>
+                        </ul>
+                        <p>Duis doctrina qui instituendarum. Non quid dolore qui cernantur, occaecat cillum nam consequat domesticarum et est quo firmissimum e ne te arbitrantur. Ita enim do velit est nulla arbitror voluptate.</p>
+                        
+               <!-- Carousel -->         
+                        <div class="carousel-container">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+
+                <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                            <div class="carousel-page">
+                              <div class="row">
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>  
+                              </div>  
+                            </div>  
+                          </div>
+                          <div class="item">
+                            <div class="carousel-page">
+                              <div class="row">
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>   
+                                </div>
+                                <div class="col-xs-4 carousel-card">
+                                  <h2>Heading</h2>
+                                  <span class="glyphicon glyphicon-marker"></span>
+                                  Location
+                                  <div class="card-sub-heading"></div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
+                                  </p>
+                                  <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-success">VIEW</a>
+                                    <a href="#" class="btn btn-success">SUPPORT</a>
+                                  </div>
+                                </div>  
+                              </div>  
+                            </div>  
+                          </div>    
+                        </div>
+        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                <button type="button" data-toggle="collapse" data-target="#donations-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-triangle-bottom"></span> Donations</button>
+                    <div id="donations-content" class="collapse">
+                        
+                        <p>Duis doctrina qui instituendarum. Non quid dolore qui cernantur, occaecat cillum nam consequat domesticarum et est quo firmissimum e ne te arbitrantur.</p>
+        <!-- Table -->                
                         <div class="container">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#projects-filter" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand visible-xs" href="#">Filter</a>
-                            </div>
-                            <div class="collapse navbar-collapse" id="projects-filter">
-                                <ul class="nav navbar-nav">
-                                    <li class="projecttype" ng-click="selectType('created',18396)" ng-class="{active: type == 'created'}">
-                                        <a href="#">Started</a>
-                                    </li>
-                                    <li class="projecttype" ng-click="selectType('supported',18396)" ng-class="{active: type == 'supported'}">
-                                        <a href="#">Funded</a>
-                                    </li>
-                                    <li class="projecttype" ng-click="selectType('liked',18396)" ng-class="{active: type == 'liked'}">
-                                        <a href="#">Liked</a>
-                                    </li>
-                                    <li class="projecttype" ng-click="selectType('assigned',18396)" ng-class="{active: type == 'assigned'}">
-                                        <a href="#">Team Member</a>
-                                    </li>
-                                </ul>
-                            </div>
+                          <h2>Donations</h2>
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Campaign</th>
+                                <th>Donation</th>
+                                <th>Status</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Plainwell Dog Park</td>
+                                <td>$7.85 USD</td>
+                                <td>
+                                  <b>Created:</b> 7/10/17 11:46AM<br>
+                                  <b>Charged:</b> 7/10/17 11:46AM AM to American Express ending in 1007.<br>
+                                  <b>Display as:</b> Ebrahim Varachia $7 USD<br>
+                                  <button type="button" class="btn btn-success">Edit Display</button>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn btn-success">Resend Receipt</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
-                    </nav>
-                    <div class="col-md-12">
-                        <project-card-grid default-type="created" max-per-load="6" category="category" type="type" show-load-more="true" param1="cparam1"></project-card-grid>
                     </div>
-                </div>
             </div>
         </div>
+    </div>
+</div>
 <!--    END HERE-->
         <section class="subscribe">
             <div class="container">
