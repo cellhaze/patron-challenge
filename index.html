@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcell Hayes Custom Profile Layout</title>
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <link href='//fonts.googleapis.com/css?family=Roboto:900,500,400italic,100,700italic,300,700,400' rel='stylesheet' type='text/css'>
+    <link href="//media.patronicity.com/9d66266e868fe6a6f3178ebb17639b9c924b5571/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//media.patronicity.com/9d66266e868fe6a6f3178ebb17639b9c924b5571/css/styles.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="style.css">
+<!--    Custom CSS-->
+    <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="angular.min.js"></script>
-    <script src="angular-route.min.js"></script>
-</head>
-<body>
-</script>
+    <script src="//media.patronicity.com/9d66266e868fe6a6f3178ebb17639b9c924b5571/js/jquery.min.js" type="text/javascript"></script>
+    <script src="//media.patronicity.com/9d66266e868fe6a6f3178ebb17639b9c924b5571/js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="canonical" href="https://www.patronicity.com/users/view"/>
+    <link rel="alternate" type="application/rss+xml" title="Patronicity" href="https://www.patronicity.com/blog/rss/all.rss"/>
+</head>        
 <body ng-app="patronicity">
     <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -22,7 +30,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/">
-                        <img class="logo" alt="Patronicity" src="//media.patronicity.com/9d66266e868fe6a6f3178ebb17639b9c924b5571/img/logo-white.svg"/>
+                        <img class="logo" alt="Patronicity" src="images/logo-white.svg"/>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -74,27 +82,28 @@
             </div>
         </nav>
 <!--    START HERE-->
-<div id="custom-profile">
+<div class="main-right-container">   
+<div id="custom-profile left-container">
     <div class="row">
         <div class="col-xs-2 left-sidebar">
             <div class="profile-nav align-middle">
                 <div class="profile-image-container">
                     <img src="images/ebrahim-profile.jpg" class="img-circle" width="140" height="140">
                     <div class="overlay">
-                        <div class="text"><a href="#">Edit<br>Image</a></div>
+                        <div class="text"><a href="#" data-toggle="modal" data-target="#myModal">Edit<br>Image</a></div>
                     </div>
                 </div>    
-                <span id="edit-button"><a href="#">Edit</a></span>
+                <span id="edit-button"><a href="#" data-toggle="modal" data-target="#myModal">Edit</a></span>
                 <button type="button" class="btn btn-success">Facebook</button>
                 <button type="button" class="btn btn-success">Email</button>
-                <button type="button" class="btn btn-success">Info</button>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Info</button>
             </div>    
         </div>
         <div class="col-xs-10 main-content">
             <div class="padding-left">
                 <div class="name-area">
                     <h1 id="profile-name">Ebrahim Varachia
-                    <small>
+                    <small id="user-location">
                         <span class="glyphicon glyphicon-map-marker"></span>Detroit</small>
                     </h1>
                 </div>
@@ -115,6 +124,7 @@
                         </div>
                         <div class="modal-body">
                           <div class="info-row">
+                            <h3 id="public"><i>PUBLIC</i></h3>  
                             <div class="info-left">
                               <h3>Company</h3><h4>Company Name</h4>
                             </div>
@@ -138,8 +148,30 @@
                               <h3>Email</h3><h4>email@email.com</h4>
                             </div>
                           </div>
+                          <div class="private-row">
+                              <h3 id="private"><i>PRIVATE</i></h3>
+                            <div class="info-left">
+                              <h3>Credit Card</h3><h5>Ending in XXXX</h5>
+                            </div>
+                            <div class="info-right">
+                              <button type="button" class="btn btn-warning">Change</button>
+                            </div>  
+                          </div>                       
+                          <div class="private-row">
+                            <div class="info-left">
+                              <h4>Profile Image</h4>
+                              <img src="images/ebrahim-profile.jpg" id="modal-profile" class="img-circle" width="60" height="60">
+                                <div class="overlay">
+                                    <div class="text"><a href="#" data-toggle="modal" data-target="#myModal">Change<br>Image</a></div>
+                                </div>
+                            </div>
+                            <div class="info-right">
+                              <button type="button" class="btn btn-warning">Change</button>
+                            </div>  
+                          </div>
                         </div>
                         <div class="modal-footer">
+                          <button type="button" class="btn btn-warning" data-dismiss="modal">Edit</button>
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                       </div>  
@@ -211,11 +243,12 @@
                           <div class="item">
                             <div class="carousel-page">
                               <div class="row">
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
                                   </p>
                                   <div class="btn-group btn-group-justified">
@@ -223,23 +256,25 @@
                                     <a href="#" class="btn btn-success">SUPPORT</a>
                                   </div>
                                 </div>
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
                                   </p>
                                   <div class="btn-group btn-group-justified">
                                     <a href="#" class="btn btn-success">VIEW</a>
                                     <a href="#" class="btn btn-success">SUPPORT</a>
-                                  </div>   
+                                  </div>
                                 </div>
-                                <div class="col-xs-4 carousel-card">
-                                  <h2>Heading</h2>
-                                  <span class="glyphicon glyphicon-marker"></span>
+                                <div class="col-xs-3 carousel-card">
+                                  <h3>Heading</h3>
+                                  <span class="glyphicon glyphicon-map-marker"></span>
                                   Location
                                   <div class="card-sub-heading"></div>
+                                  <img src="images/nature-placeholder.jpg" class="card-images"></img>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Nam rutrum bibendum tortor in pretium. Vivamus condimentum ullamcorper lacus.
                                   </p>
                                   <div class="btn-group btn-group-justified">
@@ -249,7 +284,7 @@
                                 </div>  
                               </div>  
                             </div>  
-                          </div>    
+                          </div>   
                         </div>
         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -265,10 +300,9 @@
                     </div>
                 <button type="button" data-toggle="collapse" data-target="#donations-content" class="btn btn-warning btn-block btn-md"><span class="glyphicon glyphicon-triangle-bottom"></span> Donations</button>
                     <div id="donations-content" class="collapse">
-                        
                         <p>Duis doctrina qui instituendarum. Non quid dolore qui cernantur, occaecat cillum nam consequat domesticarum et est quo firmissimum e ne te arbitrantur.</p>
         <!-- Table -->                
-                        <div class="container">
+                        <div class="container donations">
                           <h2>Donations</h2>
                           <table class="table">
                             <thead>
@@ -289,7 +323,7 @@
                                   <b>Display as:</b> Ebrahim Varachia $7 USD<br>
                                   <button type="button" class="btn btn-success">Edit Display</button>
                                 </td>
-                                <td>
+                                <td id="table-column-shrink">
                                   <button type="button" class="btn btn-success">Resend Receipt</button>
                                 </td>
                               </tr>
@@ -301,6 +335,7 @@
         </div>
     </div>
 </div>
+</div> 
 <!--    END HERE-->
         <section class="subscribe">
             <div class="container">
