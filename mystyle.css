@@ -159,6 +159,10 @@ a {
     max-width: 600px;
 }
 
+#project-content li {
+    font-weight: 900;
+}
+
 .more-info {
     font-size: 30px;
     display: block;
@@ -286,4 +290,29 @@ a {
     max-height: 600px;
     overflow: auto;
 */
+}
+
+/*------Media Queries------*/
+
+@media screen and (max-width: 1000px) {
+    
+    .left-sidebar {
+        height: auto;
+    }
+    
+    .left-sidebar:before {
+        background-size: 30%;
+    }
+    
+    .left-sidebar button {
+        display: inline;
+    }
+    
+    #edit-button {
+        display: none;
+    }
+    
+    #user-location{
+        display: block;
+    }
 }
